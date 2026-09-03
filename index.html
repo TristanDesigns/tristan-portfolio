@@ -78,20 +78,31 @@
     position:relative;
     z-index:1;
     background:var(--ink);
+    border-radius:32px 32px 0 0;
+    box-shadow:0 -12px 32px rgba(0,0,0,.45);
     display:flex;
     flex-direction:column;
     align-items:center;
     justify-content:center;
-    gap:clamp(28px,5vh,56px);
-    padding:clamp(40px,7vh,64px) 24px clamp(56px,9vh,88px);
+    gap:clamp(24px,4.5vh,44px);
+    padding:14px 24px clamp(40px,7vh,64px);
+  }
+  .work-handle{
+    width:44px;
+    height:5px;
+    border-radius:3px;
+    background:rgba(245,241,230,.35);
   }
   .work-header{
-    font-family:'Archivo Black','Arial Black',sans-serif;
-    font-weight:400;
-    text-transform:uppercase;
-    letter-spacing:.04em;
-    font-size:clamp(28px,5vw,48px);
-    color:var(--paper);
+    display:inline-block;
+    font-family:ui-sans-serif,sans-serif;
+    font-weight:700;
+    font-size:16px;
+    color:var(--ink);
+    background:var(--paper);
+    border:3px solid var(--paper);
+    border-radius:100px;
+    padding:10px 30px;
     margin:0;
   }
   .shapes-row{
@@ -130,7 +141,8 @@
   <div class="hero-spacer" aria-hidden="true"></div>
 
   <section id="work" class="work">
-    <h2 class="work-header">Selected Work</h2>
+    <div class="work-handle" aria-hidden="true"></div>
+    <h2 class="work-header">Work</h2>
     <div class="shapes-row">
       <a class="shape" href="RMCF/RMCF.html" aria-label="Rocky Mountain Cigar Festival">
         <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="var(--lime)"/></svg>
