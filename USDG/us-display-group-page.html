@@ -322,9 +322,11 @@ html[data-frankys="1"] body{background:var(--paper) !important}
 html[data-frankys="1"] .nav{background:var(--paper) !important;border-bottom:2px solid var(--ink) !important;position:relative}
 html[data-frankys="1"] .nav::after{content:'';display:block;position:absolute;left:0;right:0;top:100%;height:20px;background-image:conic-gradient(var(--ink) 90deg,var(--paper) 90deg 180deg,var(--ink) 180deg 270deg,var(--paper) 270deg);background-size:20px 20px;border-bottom:2px solid var(--ink)}
 html[data-frankys="1"] .eyebrow-tag{transform:none !important;border-radius:9999px !important;border:2px solid var(--ink) !important;background:var(--paper) !important;color:var(--ink) !important}
-html[data-frankys="1"] .btn{border-radius:6px !important;box-shadow:inset 0 1px 0 0 var(--paper) !important;transform:none !important;border:2px solid var(--ink) !important}
-html[data-frankys="1"] .btn:not(.secondary){background:#128e44 !important;color:#fff !important}
-html[data-frankys="1"] .btn.secondary{background:var(--paper) !important;color:var(--ink) !important}
+html[data-frankys="1"] .btn{border-radius:9999px !important;box-shadow:none !important;transform:none !important;border:none !important}
+html[data-frankys="1"] .btn:not(.secondary){background:var(--ink) !important;color:#fff !important}
+html[data-frankys="1"] .btn:not(.secondary)::after{content:'+';margin-left:6px}
+html[data-frankys="1"] .btn.secondary{background:transparent !important;color:var(--ink) !important}
+html[data-frankys="1"] .btn.secondary::before{content:'→';margin-right:6px}
 html[data-frankys="1"] .g-card,html[data-frankys="1"] .pull-card,html[data-frankys="1"] .role-card{box-shadow:none !important;transform:none !important;border-radius:12px !important;background:var(--paper) !important}
 html[data-frankys="1"] .g-card{border:2px solid var(--ink) !important}
 html[data-frankys="1"] .case-num{border:2px solid var(--ink) !important;border-radius:9999px !important}
@@ -334,6 +336,12 @@ html[data-frankys="1"] .hero-sub{color:var(--ink) !important}
 html[data-frankys="1"] .fold-head{background:transparent !important}
 html[data-frankys="1"] .hm-l{color:var(--ink) !important}
 html[data-frankys="1"] .pull-card,html[data-frankys="1"] .stat-card:nth-child(2),html[data-frankys="1"] .role-icon,html[data-frankys="1"] .feat-art,html[data-frankys="1"] .g-card-img{background:var(--paper) !important}
+html[data-frankys="1"] .contact .btn.secondary{color:var(--paper) !important}
+html[data-frankys="1"] .fold-glyph{background:var(--paper) !important;border:2px solid var(--ink) !important;box-shadow:none !important;border-radius:9999px !important;transform:none !important}
+html[data-frankys="1"] .fold-shape{stroke:var(--ink) !important;stroke-width:2.5 !important}
+html[data-frankys="1"] .fold-plus-h,html[data-frankys="1"] .fold-plus-v{stroke:var(--ink) !important;stroke-width:3 !important}
+html[data-frankys="1"] .fold-num{background:var(--paper) !important;border:2px solid var(--ink) !important;box-shadow:none !important;transform:none !important;border-radius:9999px !important}
+html[data-frankys="1"] .fold.is-open .fold-shape{fill:#faa21f !important}
 </style>
 
 <style>
@@ -359,6 +367,11 @@ html[data-structured="1"] .hero-sub{color:var(--ink) !important}
 html[data-structured="1"] .fold-head{background:transparent !important}
 html[data-structured="1"] .hm-l{color:var(--ink) !important}
 html[data-structured="1"] .pull-card,html[data-structured="1"] .stat-card:nth-child(2),html[data-structured="1"] .role-icon,html[data-structured="1"] .feat-art,html[data-structured="1"] .g-card-img{background:var(--paper) !important}
+html[data-structured="1"] .fold-glyph{background:var(--white) !important;border:1px solid var(--ink) !important;box-shadow:none !important;border-radius:9px !important;transform:none !important}
+html[data-structured="1"] .fold-shape{stroke:var(--ink) !important;stroke-width:1.5 !important}
+html[data-structured="1"] .fold-plus-h,html[data-structured="1"] .fold-plus-v{stroke:var(--ink) !important;stroke-width:2 !important}
+html[data-structured="1"] .fold-num{background:var(--white) !important;border:1px solid var(--ink) !important;box-shadow:none !important;transform:none !important;border-radius:9px !important}
+html[data-structured="1"] .fold.is-open .fold-shape{fill:var(--ink) !important}
 </style>
 
 <style>
@@ -378,7 +391,11 @@ html[data-flyingpapers="1"] .btn.secondary{background:transparent !important;col
 html[data-flyingpapers="1"] .g-card,html[data-flyingpapers="1"] .pull-card,html[data-flyingpapers="1"] .role-card{box-shadow:none !important;transform:none !important;border-radius:6px !important;background:var(--white) !important;border:none !important}
 html[data-flyingpapers="1"] .g-tag{border-radius:100px !important}
 html[data-flyingpapers="1"] .footer-bottom{border-top:1px solid var(--paper) !important}
-html[data-flyingpapers="1"] .fold-head{background:transparent !important}
+html[data-flyingpapers="1"] .fold-glyph{background:var(--white) !important;border:2px solid var(--ink) !important;box-shadow:none !important;border-radius:6px !important;transform:none !important}
+html[data-flyingpapers="1"] .fold-shape{stroke:var(--ink) !important;stroke-width:2.5 !important}
+html[data-flyingpapers="1"] .fold-plus-h,html[data-flyingpapers="1"] .fold-plus-v{stroke:var(--ink) !important;stroke-width:3 !important}
+html[data-flyingpapers="1"] .fold-num{background:var(--white) !important;border:2px solid var(--ink) !important;box-shadow:none !important;transform:none !important;border-radius:6px !important}
+html[data-flyingpapers="1"] .fold.is-open .fold-shape{fill:#f4ed36 !important}
 </style>
 
 
