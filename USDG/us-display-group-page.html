@@ -51,11 +51,6 @@
   .nav{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:var(--border) solid var(--ink);}
   .nav-inner{max-width:1180px;margin:0 auto;padding:12px 28px;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;}
   .nav-name{font-family:'Archivo Black',sans-serif;color:var(--paper);font-size:17px;text-transform:uppercase;}
-  .nav-links{display:flex;gap:5px;flex-wrap:wrap;align-items:center;}
-  .nav-links a{text-decoration:none;color:var(--ink);background:var(--lime);border:2.5px solid var(--ink);border-radius:100px;padding:6px 13px;font-weight:600;font-size:12.5px;text-transform:uppercase;letter-spacing:0.25px;}
-  .nav-links a:nth-child(2){background:var(--coral);}
-  .nav-links a:nth-child(3){background:var(--yellow);}
-  .nav-links a.back-link{background:var(--paper);color:var(--ink);opacity:0.85;font-size:12px;}
 
   /* ---------- HERO ---------- */
   .hero{padding:72px 0 60px;overflow:hidden;}
@@ -268,13 +263,8 @@
   /* ---------- DRAWN ARROW ---------- */
   .drawn-arrow{width:34px;height:20px;display:block;fill:none;stroke:var(--ink);stroke-width:3.4;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
 
-  /* nav: fewer pills, more type. Square bullets fill on hover. */
+  /* nav: just the home mark now */
   .nav-inner{padding:14px 28px}
-  .nav-links{gap:22px}
-  .nav-links a{background:none;border:none;border-radius:0;padding:4px 0;color:var(--paper);font-weight:600;font-size:13px;letter-spacing:.08em;display:inline-flex;align-items:center;gap:9px}
-  .nav-links a:nth-child(2),.nav-links a:nth-child(3){background:none}
-  .nav-links a::before{content:"";width:10px;height:10px;border:2.5px solid var(--yellow);border-radius:2px;transform:rotate(45deg);transition:background .15s ease,transform .25s cubic-bezier(.2,.7,.2,1)}
-  .nav-links a:hover::before{background:var(--yellow);transform:rotate(0deg)}
   .home-mark{color:var(--paper)}
   .nav .hm-shape{stroke:var(--paper)}
   .section-head{margin-bottom:0}
@@ -285,7 +275,7 @@
   .btn.secondary::before{background:var(--lime)}
   .btn:hover::before{transform:rotate(45deg)}
   .contact .btn::before{border-color:var(--ink)}
-  @media (max-width:540px){.nav-inner{flex-direction:row;align-items:center}.nav-links{gap:14px}.nav-links a{font-size:12px}}
+  @media (max-width:540px){.nav-inner{flex-direction:row;align-items:center}}
 
   /* ---------- RESPONSIVE ---------- */
   @media (max-width:860px){
@@ -319,12 +309,6 @@
 <nav class="nav">
   <div class="nav-inner">
     <a class="home-mark" href="../index.html" aria-label="Back to Tristan's portfolio"><span class="hm-shapes" aria-hidden="true"><svg class="hm-shape" viewBox="0 0 48 48" style="--hm-fill:#D8FF3E"><circle cx="24" cy="24" r="18"/></svg><svg class="hm-shape is-current" viewBox="0 0 48 48" style="--hm-fill:#FFC845"><rect x="7" y="7" width="34" height="34" rx="4"/></svg><svg class="hm-shape" viewBox="0 0 48 48" style="--hm-fill:#6FD6E8"><polygon points="24,3 30.2,17.2 45.6,18.4 33.9,28.4 37.5,43.5 24,35.5 10.5,43.5 14.1,28.4 2.4,18.4 17.8,17.2"/></svg><svg class="hm-shape" viewBox="0 0 48 48" style="--hm-fill:#FF6550"><polygon points="24,5 44,42 4,42"/></svg></span><span class="hm-word">Tristan</span></a>
-    <div class="nav-links">
-      <a href="#story">Story</a>
-      <a href="#process">Process</a>
-      <a href="#case-study">Work</a>
-      <a href="#contact">Contact</a>
-    </div>
   </div>
 </nav>
 
