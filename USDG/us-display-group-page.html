@@ -10,6 +10,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shrikhand&family=Kaushan+Script&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
     --purple:#6C4CE0;
@@ -333,6 +334,32 @@ html[data-frankys="1"] .fold-head{background:transparent !important}
 html[data-frankys="1"] .hm-l{color:var(--ink) !important}
 html[data-frankys="1"] .pull-card,html[data-frankys="1"] .stat-card:nth-child(2),html[data-frankys="1"] .role-icon,html[data-frankys="1"] .feat-art,html[data-frankys="1"] .g-card-img{background:var(--paper) !important}
 </style>
+
+<style>
+html[data-structured="1"]{--purple:#000000;--purple-deep:#000000;--lime:#dfdcd5;--coral:#c4c3b6;--yellow:#e7e5e4;--ink:#000000;--paper:#c4c3b6;--white:#e7e5e4;--border:1px;--radius:9px;--shadow:none;--shadow-sm:none}
+html[data-structured="1"] h1,html[data-structured="1"] h2,html[data-structured="1"] h3,html[data-structured="1"] .fold-title,
+html[data-structured="1"] .hm-word{font-family:'Playfair Display',serif !important;font-weight:500 !important;letter-spacing:-0.01em !important}
+html[data-structured="1"] body,html[data-structured="1"] .btn,html[data-structured="1"] .eyebrow-tag,html[data-structured="1"] .g-tag,
+html[data-structured="1"] .case-text,html[data-structured="1"] .fold-gist,html[data-structured="1"] p,html[data-structured="1"] .nav,
+html[data-structured="1"] .g-card-body,html[data-structured="1"] .footer-bottom,html[data-structured="1"] .case-num,
+html[data-structured="1"] .hero-sub{font-family:'Inter',sans-serif !important}
+html[data-structured="1"] body{background:var(--paper) !important}
+html[data-structured="1"] .nav{background:var(--paper) !important;border-bottom:1px solid var(--ink) !important}
+html[data-structured="1"] .eyebrow-tag{transform:none !important;border-radius:2px !important;border:1px solid var(--ink) !important;background:var(--paper) !important;color:var(--ink) !important}
+html[data-structured="1"] .btn{border-radius:28.8px !important;box-shadow:none !important;transform:none !important;border:none !important;padding:9px 17px !important;font-size:12px !important}
+html[data-structured="1"] .btn:not(.secondary){background:var(--ink) !important;color:#fff !important}
+html[data-structured="1"] .btn.secondary{background:var(--paper) !important;color:var(--ink) !important;border:1px solid var(--ink) !important}
+html[data-structured="1"] .g-card,html[data-structured="1"] .pull-card,html[data-structured="1"] .role-card{box-shadow:none !important;transform:none !important;border-radius:9px !important;background:var(--white) !important}
+html[data-structured="1"] .g-card{border:1px solid var(--ink) !important}
+html[data-structured="1"] .g-tag{border-radius:2px !important}
+html[data-structured="1"] .hero-art{filter:grayscale(1) contrast(1.1)}
+html[data-structured="1"] .footer-bottom{border-top:1px solid var(--paper) !important}
+html[data-structured="1"] .hero-sub{color:var(--ink) !important}
+html[data-structured="1"] .fold-head{background:transparent !important}
+html[data-structured="1"] .hm-l{color:var(--ink) !important}
+html[data-structured="1"] .pull-card,html[data-structured="1"] .stat-card:nth-child(2),html[data-structured="1"] .role-icon,html[data-structured="1"] .feat-art,html[data-structured="1"] .g-card-img{background:var(--paper) !important}
+</style>
+
 
 </head>
 <body>
@@ -756,6 +783,25 @@ html[data-frankys="1"] .pull-card,html[data-frankys="1"] .stat-card:nth-child(2)
   syncFrankys();
   addEventListener('tristan-letters',syncFrankys);
   addEventListener('storage',function(e){if(e.key==='tristan-letters')syncFrankys()});
+})();
+</script>
+
+
+<script>
+(function(){
+  function syncStructured(){
+    try{
+      var raw=localStorage.getItem('tristan-letters');
+      if(!raw){document.documentElement.removeAttribute('data-structured');return}
+      var idx=JSON.parse(raw);
+      if(!Array.isArray(idx)){document.documentElement.removeAttribute('data-structured');return}
+      if(idx[6]===4){document.documentElement.setAttribute('data-structured','1')}
+      else{document.documentElement.removeAttribute('data-structured')}
+    }catch(e){}
+  }
+  syncStructured();
+  addEventListener('tristan-letters',syncStructured);
+  addEventListener('storage',function(e){if(e.key==='tristan-letters')syncStructured()});
 })();
 </script>
 
