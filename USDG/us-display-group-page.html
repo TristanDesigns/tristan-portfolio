@@ -255,6 +255,8 @@
   .home-mark{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:inherit;padding:4px 2px}
   .hm-word{font-size:17px;letter-spacing:.01em;line-height:1;display:inline-flex;align-items:baseline}
   .hm-l{font-family:'Shrikhand',cursive}
+  .hm-l[data-cyc="1"]{text-transform:uppercase}
+  .hm-l[data-cyc="2"],.hm-l[data-cyc="4"],.hm-l[data-cyc="7"]{text-transform:lowercase}
   .home-mark:focus-visible{outline:3px solid #FFC845;outline-offset:4px;border-radius:6px}
 
   /* ---------- DRAWN ARROW ---------- */
@@ -705,7 +707,7 @@
       if(!Array.isArray(idx))return;
       spans.forEach(function(el,i){
         var n=idx[i];
-        if(typeof n==='number'&&CYC[n])el.style.fontFamily=CYC[n];
+        if(typeof n==='number'&&CYC[n]){el.style.fontFamily=CYC[n];el.dataset.cyc=n}
       });
     }catch(e){}
   }
