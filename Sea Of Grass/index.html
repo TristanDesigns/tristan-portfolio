@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0B0B14;
@@ -116,6 +117,18 @@ html[data-structured="1"] .back{background:var(--s-ink) !important;color:var(--s
 html[data-structured="1"] .back:hover,html[data-structured="1"] .back:active{transform:none !important;box-shadow:none !important}
 </style>
 
+<style>
+html[data-flyingpapers="1"]{--fp-violet:#8584bd;--fp-hivis:#f4ed36;--fp-lilac:#61609a;--fp-bone:#f9f5f2;--fp-ink:#1a1a1a;--fp-pure:#000000}
+html[data-flyingpapers="1"] body{background:var(--fp-violet) !important;background-image:none !important}
+html[data-flyingpapers="1"] .card{background:var(--fp-bone) !important;border:none !important;border-radius:6px !important;box-shadow:none !important}
+html[data-flyingpapers="1"] .eyebrow{background:transparent !important;color:var(--fp-ink) !important;border:1px solid var(--fp-ink) !important;border-radius:100px !important;font-family:'JetBrains Mono',monospace !important;font-size:12px !important;letter-spacing:.05em !important}
+html[data-flyingpapers="1"] h1{font-family:'Anton',sans-serif !important;font-weight:400 !important;color:var(--fp-ink) !important;text-transform:uppercase !important;letter-spacing:.02em !important}
+html[data-flyingpapers="1"] p{font-family:'Inter',sans-serif !important;color:var(--fp-ink) !important;font-size:16px !important}
+html[data-flyingpapers="1"] .back{background:var(--fp-bone) !important;color:var(--fp-pure) !important;border:none !important;border-radius:100px !important;box-shadow:none !important;font-family:'Inter',sans-serif !important;font-weight:700 !important;font-size:16px !important;letter-spacing:.05em !important;padding:12px 17px !important}
+html[data-flyingpapers="1"] .back:hover,html[data-flyingpapers="1"] .back:active{transform:none !important;box-shadow:none !important}
+</style>
+
+
 </head>
 <body>
   <div class="card">
@@ -160,6 +173,25 @@ html[data-structured="1"] .back:hover,html[data-structured="1"] .back:active{tra
   addEventListener('storage',function(e){if(e.key==='tristan-letters')syncStructured()});
 })();
 </script>
+
+<script>
+(function(){
+  function syncFlyingPapers(){
+    try{
+      var raw=localStorage.getItem('tristan-letters');
+      if(!raw){document.documentElement.removeAttribute('data-flyingpapers');return}
+      var idx=JSON.parse(raw);
+      if(!Array.isArray(idx)){document.documentElement.removeAttribute('data-flyingpapers');return}
+      if(idx[6]===6){document.documentElement.setAttribute('data-flyingpapers','1')}
+      else{document.documentElement.removeAttribute('data-flyingpapers')}
+    }catch(e){}
+  }
+  syncFlyingPapers();
+  addEventListener('tristan-letters',syncFlyingPapers);
+  addEventListener('storage',function(e){if(e.key==='tristan-letters')syncFlyingPapers()});
+})();
+</script>
+
 
 </body>
 </html>
