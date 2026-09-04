@@ -804,6 +804,8 @@ html[data-flyingpapers="1"] .fold.is-open .fold-shape{fill:#f4ed36 !important}
     }catch(e){}
   }
   apply();
+  addEventListener('tristan-letters', apply);
+  addEventListener('storage', function(e){if(e.key==='tristan-letters')apply()});
 })();
 </script>
 
