@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <style>
   :root{
     --ink:#0B0B14;
@@ -90,6 +91,19 @@
     box-shadow:2px 2px 0 var(--ink);
   }
 </style>
+
+<style>
+html[data-frankys="1"]{--f-cream:#f3e5df;--f-ink:#000000;--f-gray:#e5e7eb;--f-charcoal:#333333;--f-muted:#737373;--f-orange:#faa21f;--f-green:#128e44}
+html[data-frankys="1"] body{background:var(--f-cream) !important;background-image:none !important}
+html[data-frankys="1"] .card{background:var(--f-cream) !important;border:2px solid var(--f-ink) !important;border-radius:12px !important;box-shadow:none !important;position:relative;padding-top:64px !important;overflow:hidden}
+html[data-frankys="1"] .card::before{content:'';position:absolute;top:0;left:0;right:0;height:36px;background:linear-gradient(to right,#faa21f,#fef3c7,#faa21f);border-bottom:2px solid var(--f-ink)}
+html[data-frankys="1"] .eyebrow{background:var(--f-ink) !important;color:var(--f-cream) !important;border-radius:9999px !important;font-family:'VT323',monospace !important;font-size:14px !important;letter-spacing:.04em !important}
+html[data-frankys="1"] h1{font-family:'VT323',monospace !important;color:var(--f-ink) !important;text-transform:uppercase !important}
+html[data-frankys="1"] p{font-family:'VT323',monospace !important;color:var(--f-ink) !important;font-size:20px !important}
+html[data-frankys="1"] .back{background:var(--f-green) !important;color:#fff !important;border:1px solid var(--f-ink) !important;border-radius:6px !important;box-shadow:inset 0 1px 0 0 var(--f-cream) !important;font-family:'VT323',monospace !important;font-size:18px !important}
+html[data-frankys="1"] .back:hover,html[data-frankys="1"] .back:active{transform:none !important;box-shadow:inset 0 1px 0 0 var(--f-cream) !important}
+</style>
+
 </head>
 <body>
   <div class="card">
@@ -98,5 +112,24 @@
     <p>This one's still being written up. Check back soon — or reach out if you want the story before it's live.</p>
     <a class="back" href="../index.html">&larr; Back to portfolio</a>
   </div>
+
+<script>
+(function(){
+  function syncFrankys(){
+    try{
+      var raw=localStorage.getItem('tristan-letters');
+      if(!raw){document.documentElement.removeAttribute('data-frankys');return}
+      var idx=JSON.parse(raw);
+      if(!Array.isArray(idx)){document.documentElement.removeAttribute('data-frankys');return}
+      if(idx[6]===3){document.documentElement.setAttribute('data-frankys','1')}
+      else{document.documentElement.removeAttribute('data-frankys')}
+    }catch(e){}
+  }
+  syncFrankys();
+  addEventListener('tristan-letters',syncFrankys);
+  addEventListener('storage',function(e){if(e.key==='tristan-letters')syncFrankys()});
+})();
+</script>
+
 </body>
 </html>
