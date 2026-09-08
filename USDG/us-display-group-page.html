@@ -12,6 +12,7 @@
 <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500&display=swap" rel="stylesheet">
 <style>
   :root{
     --purple:#6C4CE0;
@@ -396,6 +397,44 @@ html[data-flyingpapers="1"] .fold-shape{stroke:var(--ink) !important;stroke-widt
 html[data-flyingpapers="1"] .fold-plus-h,html[data-flyingpapers="1"] .fold-plus-v{stroke:var(--ink) !important;stroke-width:3 !important}
 html[data-flyingpapers="1"] .fold-num{background:var(--white) !important;border:2px solid var(--ink) !important;box-shadow:none !important;transform:none !important;border-radius:6px !important}
 html[data-flyingpapers="1"] .fold.is-open .fold-shape{fill:#f4ed36 !important}
+</style>
+
+<style>
+html[data-dimension="1"]{--purple:#0a0a0a;--purple-deep:#161616;--lime:#6b62f2;--coral:#161616;--yellow:#161616;--ink:#ededed;--paper:#161616;--white:#161616;--border:1px;--radius:24px;--shadow:none;--shadow-sm:none;--dm-void:#0a0a0a;--dm-graphite:#161616;--dm-bone:#ededed;--dm-ash:#c2c2c2;--dm-slate:#686868;--dm-hairline:#e5e5e5;--dm-violet:#6b62f2}
+html[data-dimension="1"] body,html[data-dimension="1"] h1,html[data-dimension="1"] h2,html[data-dimension="1"] h3,html[data-dimension="1"] .btn,
+html[data-dimension="1"] .eyebrow-tag,html[data-dimension="1"] .g-tag,html[data-dimension="1"] .case-text,html[data-dimension="1"] .fold-gist,
+html[data-dimension="1"] .pull-card,html[data-dimension="1"] p,html[data-dimension="1"] .nav,html[data-dimension="1"] .g-card-body,
+html[data-dimension="1"] .footer-bottom,html[data-dimension="1"] .hm-word,html[data-dimension="1"] .role-card,html[data-dimension="1"] .case-num,
+html[data-dimension="1"] .fold-title,html[data-dimension="1"] .hero-sub{font-family:'DM Sans',sans-serif !important}
+html[data-dimension="1"] h1,html[data-dimension="1"] h2,html[data-dimension="1"] h3{font-weight:500 !important;text-transform:none !important;letter-spacing:-0.035em !important}
+html[data-dimension="1"] body{background:var(--dm-void) !important;color:var(--dm-bone) !important}
+html[data-dimension="1"] .nav{background:var(--dm-graphite) !important;border-bottom:1px solid var(--dm-hairline) !important}
+html[data-dimension="1"] .home-mark,html[data-dimension="1"] .hm-l{color:var(--dm-bone) !important}
+html[data-dimension="1"] .hero h1{color:var(--dm-bone) !important}
+html[data-dimension="1"] .hero-sub{color:var(--dm-ash) !important}
+html[data-dimension="1"] .hero h1 .hl,html[data-dimension="1"] .contact h2 .hl{background:var(--dm-violet) !important;color:#ffffff !important;border:none !important;transform:none !important;border-radius:10px !important}
+html[data-dimension="1"] .eyebrow-tag{transform:none !important;border-radius:9999px !important;border:1px solid var(--dm-hairline) !important;background:transparent !important;color:var(--dm-bone) !important;font-weight:500 !important}
+html[data-dimension="1"] .btn{border-radius:9999px !important;box-shadow:none !important;transform:none !important;border:none !important;font-weight:500 !important;text-transform:none !important;letter-spacing:.01em !important;padding:12px 22px !important}
+html[data-dimension="1"] .btn:not(.secondary){background:#ffffff !important;color:#161616 !important}
+html[data-dimension="1"] .btn.secondary{background:transparent !important;color:var(--dm-bone) !important;border:1px solid var(--dm-hairline) !important}
+html[data-dimension="1"] .g-card,html[data-dimension="1"] .pull-card,html[data-dimension="1"] .role-card,html[data-dimension="1"] .stat-card{box-shadow:none !important;transform:none !important;border-radius:24px !important;background:var(--dm-graphite) !important;border:1px solid var(--dm-hairline) !important}
+html[data-dimension="1"] .pull-card p,html[data-dimension="1"] .pipe-step:nth-child(4n+3) .pd{color:var(--dm-bone) !important}
+html[data-dimension="1"] .on-purple .section-head h2,html[data-dimension="1"] .on-purple .section-head p,html[data-dimension="1"] .case-text h4,html[data-dimension="1"] .fold-head.on-dark h2,html[data-dimension="1"] .fold-head.on-dark .fold-gist,html[data-dimension="1"] [style*="color:var(--paper)"]{color:var(--dm-bone) !important}
+html[data-dimension="1"] .section-head p.section-desc,html[data-dimension="1"] .role-card p,html[data-dimension="1"] .pipe-step .pd,html[data-dimension="1"] .feat-body p,html[data-dimension="1"] .case-final-cap span,html[data-dimension="1"] .g-card-body p{color:var(--dm-ash) !important}
+html[data-dimension="1"] .case-num{border:1px solid var(--dm-hairline) !important;border-radius:9999px !important;background:var(--dm-graphite) !important;color:var(--dm-bone) !important}
+html[data-dimension="1"] .hero-art{filter:grayscale(1) contrast(1.05) brightness(.92)}
+html[data-dimension="1"] .pull-card,html[data-dimension="1"] .stat-card:nth-child(2),html[data-dimension="1"] .role-icon,html[data-dimension="1"] .feat-art,html[data-dimension="1"] .g-card-img{background:var(--dm-graphite) !important}
+html[data-dimension="1"] .role-icon{border:1px solid var(--dm-hairline) !important;border-radius:4px !important}
+html[data-dimension="1"] .contact{background:var(--dm-void) !important;color:var(--dm-bone) !important}
+html[data-dimension="1"] .contact h2{color:var(--dm-bone) !important}
+html[data-dimension="1"] .contact .btn.secondary{color:var(--dm-bone) !important}
+html[data-dimension="1"] .footer-bottom{border-top:1px solid var(--dm-hairline) !important;color:var(--dm-slate) !important}
+html[data-dimension="1"] .fold-head{background:transparent !important}
+html[data-dimension="1"] .fold-glyph{background:var(--dm-graphite) !important;border:1px solid var(--dm-hairline) !important;box-shadow:none !important;border-radius:10px !important;transform:none !important}
+html[data-dimension="1"] .fold-shape{stroke:var(--dm-hairline) !important;stroke-width:1.5 !important;fill:transparent !important}
+html[data-dimension="1"] .fold-plus-h,html[data-dimension="1"] .fold-plus-v{stroke:var(--dm-bone) !important;stroke-width:2 !important}
+html[data-dimension="1"] .fold-num{background:transparent !important;border:1px solid var(--dm-hairline) !important;box-shadow:none !important;transform:none !important;border-radius:9999px !important;color:var(--dm-ash) !important}
+html[data-dimension="1"] .fold.is-open .fold-shape{fill:var(--dm-violet) !important}
 </style>
 
 
@@ -862,6 +901,24 @@ html[data-flyingpapers="1"] .fold.is-open .fold-shape{fill:#f4ed36 !important}
   syncFlyingPapers();
   addEventListener('tristan-letters',syncFlyingPapers);
   addEventListener('storage',function(e){if(e.key==='tristan-letters')syncFlyingPapers()});
+})();
+</script>
+
+<script>
+(function(){
+  function syncDimension(){
+    try{
+      var raw=localStorage.getItem('tristan-letters');
+      if(!raw){document.documentElement.removeAttribute('data-dimension');return}
+      var idx=JSON.parse(raw);
+      if(!Array.isArray(idx)){document.documentElement.removeAttribute('data-dimension');return}
+      if(idx[6]===1){document.documentElement.setAttribute('data-dimension','1')}
+      else{document.documentElement.removeAttribute('data-dimension')}
+    }catch(e){}
+  }
+  syncDimension();
+  addEventListener('tristan-letters',syncDimension);
+  addEventListener('storage',function(e){if(e.key==='tristan-letters')syncDimension()});
 })();
 </script>
 
