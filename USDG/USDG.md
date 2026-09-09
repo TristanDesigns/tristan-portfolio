@@ -165,6 +165,18 @@ Shared across all three case-study pages — same structure, same behaviour, sam
 
 Here it is a `#ffffff` bar over the canvas with a 1px `#e5e5e5` rule beneath and no shadow — the same hairline separation every card uses. Wordmark in `#0a0a0a`; links in Geist 14px/500 `#737373`, going `#0a0a0a` on hover. Sticky rather than fixed, so it holds its place in the flow above the hero.
 
+### Paint Strip
+**Role:** The tool row under the Fold Demo — ink, artwork, and the dieline file
+
+A single 50px row on white with a hairline above it, holding a palette on the left and three text buttons on the right. **This is the one place in the system where colour is content rather than chrome:** the swatches are inks the reader prints the carton in, not UI accents, so the monochrome rule does not apply to them — but everything *around* them stays achromatic, and the reserved `#e7000b` still never appears.
+
+- **Swatches** — 22px, 6px radius, 1px hairline, with a 2px ink ring on the selected one. Board (white, also the reset), then black, red, amber, green and blue, then a native colour input in the same 22px square for anything else.
+- **Click a panel** to fill it with the selected ink; **Fill all** floods the whole carton. Selecting Board and hitting Fill all returns the carton to plain board and drops any artwork. Because the shading is a tint overlay rather than the panels' own colour, a painted face still catches the light correctly.
+- **Image** wraps one uploaded picture across the flat sheet — each panel takes the same background sized to the full net at its own offset — so the artwork folds onto the faces the way a printed sheet does.
+- **.DXF** writes the dieline out as an ASCII DXF at 25px to the inch: two layers, `CUT` and `CREASE`, 46 lines, 20.48 × 10 inches. A real file that opens in Illustrator or any CAD tool — which is the whole point of a prepress portfolio.
+
+Panel names ride on a translucent white chip so they stay legible once a panel has ink on it, and they fade out over the first fifth of the fold.
+
 ### Fold Demo
 **Role:** The hero's right-hand column — a carton that folds from flat dieline to finished box
 
@@ -191,6 +203,7 @@ The one piece of motion in the system, and the page's thesis made touchable: the
 
 ### Don't
 - Do not introduce chromatic brand colors beyond #e7000b — the monochromatic palette is the system.
+- Do not treat the Paint Strip swatches as licence to colour the UI. Ink on the carton is content the reader chooses; every control, surface and label around it stays achromatic.
 - Do not use border-radius values other than 18px (interactive) or 24px (containers); avoid square corners on any element.
 - Do not skip the 1px hairline border on cards — the shadow alone does not define the card edge in this system.
 - Do not set body text below 14px or above #737373 lightness — the type scale is deliberately compact.
