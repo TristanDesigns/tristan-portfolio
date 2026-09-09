@@ -158,6 +158,13 @@ Background #f5f5f5, text #737373, radius 18px, padding 8px 10px, with a keyboard
 
 Text or icon in #e7000b against the monochromatic palette. The red is the only chromatic hue in the system and appears exclusively in destructive or error contexts — it never decorates.
 
+### Nav Bar
+**Role:** The one persistent chrome on the page
+
+Shared across all three case-study pages — same structure, same behaviour, same class names (`.pnav`, `.pnav-links`), only the skin changes. The `tristan` wordmark sits left, the page's section links right. **It is only present on the way up:** at rest when the page is at the top, it slides out of view on any downward scroll past the first 80px and returns on any upward scroll, with a 6px dead zone so a jittery trackpad never flickers it. Under 760px the links drop away and the wordmark stands alone. Section targets carry `scroll-margin-top` so a jump never lands under it.
+
+Here it is a `#ffffff` bar over the canvas with a 1px `#e5e5e5` rule beneath and no shadow — the same hairline separation every card uses. Wordmark in `#0a0a0a`; links in Geist 14px/500 `#737373`, going `#0a0a0a` on hover. Sticky rather than fixed, so it holds its place in the flow above the hero.
+
 ### Fold Demo
 **Role:** The hero's right-hand column — a carton that folds from flat dieline to finished box
 

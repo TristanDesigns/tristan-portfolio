@@ -143,6 +143,13 @@ Warm paper or white fill, `6px` radius, no border and no shadow — the fill alo
 
 One flat colour per band, edge to edge, no gradient and no divider rule between bands — the colour change *is* the division. Rotation: cobalt → paper → coral → paper → aqua. Never place two chromatic bands adjacent without a paper band between them.
 
+### Nav Bar
+**Role:** The one persistent chrome on the page
+
+Shared across all three case-study pages — same structure, same behaviour, same class names (`.pnav`, `.pnav-links`), only the skin changes. The `tristan` wordmark sits left, the page's section links right. **It is only present on the way up:** at rest when the page is at the top, it slides out of view on any downward scroll past the first 80px and returns on any upward scroll, with a 6px dead zone so a jittery trackpad never flickers it. Under 760px the links drop away and the wordmark stands alone. Section targets carry `scroll-margin-top` so a jump never lands under it.
+
+Here it is a deep navy ink band with a `2px` ink rule beneath, the wordmark in warm paper, and links in JetBrains Mono uppercase each preceded by a star bullet. Sticky rather than fixed, so it holds its place in the flow beneath the hero band.
+
 ### Glance Row
 **Role:** The brief, in two cards, directly under the hero
 

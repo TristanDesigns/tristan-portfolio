@@ -128,6 +128,13 @@ Transparent fill, ash label, `1px` hairline border, `22px` radius, same padding 
 
 VT323 uppercase at 13px with `+0.08em` tracking, `4px` radius — the only near-square corner in the system, deliberately, so it reads as a punched stub. Either a `1px` hairline outline with ash text, or a solid gold fill with black text for the current/featured item.
 
+### Nav Bar
+**Role:** The one persistent chrome on the page
+
+Shared across all three case-study pages — same structure, same behaviour, same class names (`.pnav`, `.pnav-inner`, `.pnav-links`), only the skin changes. The `tristan` wordmark sits left, the page's section links right. **It is only present on the way up:** at rest when the page is at the top, it slides out of view on any downward scroll past the first 80px and returns on any upward scroll, with a 6px dead zone so a jittery trackpad never flickers it. Under 760px the links drop away and the wordmark stands alone. Section targets carry `scroll-margin-top` so a jump never lands under it.
+
+Here it is a Stage Black bar with a hairline underneath, the wordmark in bone, and links as VT323 uppercase ticket text in ash that go lime on hover — the nav reads as a row of stubs. It is fixed rather than sticky because the hero is a full-viewport fixed video with nothing above it to displace.
+
 ### Checkerboard Band
 **Role:** Header underline and major section break
 

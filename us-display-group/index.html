@@ -505,6 +505,18 @@ h3,h4{letter-spacing:-.025em !important}
 @media (max-width:640px){.open-head{grid-template-columns:minmax(0,1fr);gap:12px}
   .open-head .fold-num{display:none}}
 
+/* ---- nav: present on the way up, out of the way on the way down ---- */
+.pnav{transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.pnav.is-away{transform:translateY(-100%)}
+.pnav-links{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+.pnav-links a{font-family:'Geist',ui-sans-serif,system-ui,sans-serif;font-size:14px;font-weight:500;
+  color:var(--mid);text-decoration:none;transition:color .18s ease}
+.pnav-links a:hover{color:var(--ink-1)}
+.pnav-links a:focus-visible{outline:2px solid var(--ink-1);outline-offset:3px;border-radius:6px}
+@media (prefers-reduced-motion:reduce){.pnav{transition:none}}
+@media (max-width:760px){.pnav-links{display:none}}
+section[id],footer[id]{scroll-margin-top:78px}
+
 /* ---- footer: the dark inversion ---- */
 .contact{background:var(--ink-1) !important;color:#fafafa !important}
 .contact h2{color:#fafafa !important}
@@ -515,9 +527,10 @@ h3,h4{letter-spacing:-.025em !important}
 </head>
 <body>
 
-<nav class="nav">
+<nav class="nav pnav">
   <div class="nav-inner">
     <a class="home-mark" href="/" aria-label="Back to Tristan's portfolio"><span class="hm-word"><span class="hm-l" data-i="0">t</span><span class="hm-l" data-i="1">r</span><span class="hm-l" data-i="2">i</span><span class="hm-l" data-i="3">s</span><span class="hm-l" data-i="4">t</span><span class="hm-l" data-i="5">a</span><span class="hm-l" data-i="6">n</span></span></a>
+    <div class="pnav-links"><a href="#story">The brief</a><a href="#case-study">Case study</a><a href="#gallery">More work</a><a href="#contact">Contact</a></div>
   </div>
 </nav>
 
@@ -1026,6 +1039,33 @@ h3,h4{letter-spacing:-.025em !important}
     }, {threshold:0.35});
     io.observe(scene);
   }
+})();
+</script>
+
+<script>
+/* The nav is only present on the way up. It rides along at the top of the
+   page, slides out of the way as soon as you scroll down past the first
+   80px, and comes straight back on any upward scroll. The element is
+   looked up lazily so this works whether the bar is in the HTML or
+   rendered by React after load. */
+(function(){
+  var nav = null, last = window.scrollY || 0, ticking = false;
+  var TOP = 80, STEP = 6;
+  function update(){
+    ticking = false;
+    if (!nav) { nav = document.querySelector('.pnav'); if (!nav) return; }
+    var y = window.scrollY || 0;
+    if (y <= TOP) { nav.classList.remove('is-away'); last = y; return; }
+    var d = y - last;
+    if (Math.abs(d) < STEP) return;
+    nav.classList.toggle('is-away', d > 0);
+    last = y;
+  }
+  addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  addEventListener('resize', update, { passive: true });
+  update();
 })();
 </script>
 
