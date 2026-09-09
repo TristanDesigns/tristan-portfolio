@@ -180,12 +180,14 @@ The one piece of motion in the system, and the page's thesis made touchable: the
 - Reserve #e7000b exclusively for destructive states; never use it for decoration, branding, or non-error emphasis.
 - Stack card shadows as 1px hairline + 1px + 2px offset — the combined effect is a barely-perceptible elevation that reads as 'card' without drama.
 - Use #f5f5f5 for secondary surfaces and inputs; use #fafafa for sidebar and subtle card variants — the three-tone surface stack (canvas → soft → paper) creates layering without borders.
+- Put the work first. Story, roles, process and stats belong in the single brief block under the hero — glance tiles above, nested accordions below — never as page sections between the reader and the work.
 
 ### Don't
 - Do not introduce chromatic brand colors beyond #e7000b — the monochromatic palette is the system.
 - Do not use border-radius values other than 18px (interactive) or 24px (containers); avoid square corners on any element.
 - Do not skip the 1px hairline border on cards — the shadow alone does not define the card edge in this system.
 - Do not set body text below 14px or above #737373 lightness — the type scale is deliberately compact.
+- Do not put a work section behind an accordion, and do not add a stats band. The only folds on the page are the three small ones inside the brief.
 - Do not apply gradients, colored shadows, or accent fills — every surface is a solid tone.
 - Do not use letter-spacing wider than 0.05em or tighter than -0.05em; tracking outside this range breaks the typographic system.
 - Do not mix filled and outline buttons of the same size in a single row without visual rhythm — alternate ghost or secondary variants.
@@ -211,7 +213,14 @@ Minimal imagery — the system is almost entirely UI. No hero photography, no il
 
 ## Layout
 
-The hero is a two-column split — the headline, lede and buttons on the left, the Fold Demo card filling the right — collapsing to one column under 860px. Below it, a centered max-width 1280px column on the #f5f5f5 canvas, with 48–80px between major sections and a compact 8px element gap inside components. Cards sit in even grids at 20px padding, each defined by its 1px hairline and whisper-quiet shadow rather than by spacing alone. Navigation is a #fafafa sidebar sitting one tonal step off the canvas with no divider rule. Content hierarchy is carried entirely by type scale and tonal surface stacking — there are no colored section bands, no full-bleed breakouts, and no dividers between blocks.
+The page is built work-first and reads in this order:
+
+1. **Hero** — a two-column split: headline, lede and buttons on the left, the **Fold Demo** card filling the right, collapsing to one column under 860px.
+2. **The brief** — a three-tile glance row (*The job*, *What I touched*, *The pipeline*) over three nested sub-accordions carrying the long version (*The story*, *Roles*, *Pipeline*). Everything descriptive is consolidated in this one block, summary above and detail one click below — it is not a page section the reader has to get through, and it is not numbered.
+3. **The work, open** — numbered sections with no toggle: **01 Case study**, **02 More work**. The head is `[index] [tag, title, gist]` and the work follows at full width.
+4. **Footer** — the dark inversion.
+
+There is no stat band, and no work sits behind an accordion. The only folds on the page are the three small ones inside the brief. Below the hero: a centered max-width 1280px column on the #f5f5f5 canvas, with 48–80px between major sections and a compact 8px element gap inside components. Cards sit in even grids at 20px padding, each defined by its 1px hairline and whisper-quiet shadow rather than by spacing alone. Navigation is a #fafafa sidebar sitting one tonal step off the canvas with no divider rule. Content hierarchy is carried entirely by type scale and tonal surface stacking — there are no colored section bands, no full-bleed breakouts, and no dividers between blocks.
 
 ## Agent Prompt Guide
 

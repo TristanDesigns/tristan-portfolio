@@ -143,20 +143,25 @@ Warm paper or white fill, `6px` radius, no border and no shadow — the fill alo
 
 One flat colour per band, edge to edge, no gradient and no divider rule between bands — the colour change *is* the division. Rotation: cobalt → paper → coral → paper → aqua. Never place two chromatic bands adjacent without a paper band between them.
 
-### Accordion Toggle
-**Role:** Expand/collapse control on fold sections
+### Glance Row
+**Role:** The brief, in two cards, directly under the hero
 
-`52px` square, white fill, `2px` ink outline, `6px` radius, no shadow and no transform on press. Contains a star mark at `2.5px` stroke plus a `3px` plus/minus stroke; the plus collapses to a minus on open and the star fills with Bright Sun.
+Two cards side by side on a banded paper section — the only place on the page where the job is described rather than shown. The first is the standard Card (white, `2px` ink outline, no shadow, 26/28px padding) carrying an eyebrow tag and a single paragraph at body-large. The second inverts to Signal Coral with its line set in Anton uppercase at pull-quote size — the outcome, and the loudest thing on the page after the hero. On coral the type is **ink, not white**: the page already pairs coral with ink on every button, and white on this coral is only 3.1:1. Its tag flips to a white fill with an ink label. Two across, never three; if a fact does not fit in one of the two, it belongs in a work section or nowhere.
+
+### Open Section Head
+**Role:** Heading for a work section — every section on the page uses this
+
+The fold head with the toggle removed: a two-column grid of `[mono index] [title block]`, 22/26px gaps. The title block is an eyebrow tag, an Anton uppercase title, then an optional one-line gist in the section's muted tone. The work follows after 44px at full width. A gist earns its place only when it says something the title and the work do not.
+
+### Accordion Toggle
+**Role:** Expand/collapse control — now used only by the "+ More" panel in Selected Work
+
+`52px` square, white fill, `2px` ink outline, `6px` radius, no shadow and no transform on press. Contains a star mark at `2.5px` stroke plus a `3px` plus/minus stroke; the plus collapses to a minus on open and the star fills with Bright Sun. Nothing else on the page hides behind a toggle.
 
 ### Fold Index
-**Role:** Numeric marker beside a fold heading
+**Role:** Numeric marker beside a section heading
 
 White fill, `2px` ink outline, `6px` radius, JetBrains Mono 13px. No rotation, no shadow — flat and square to the grid.
-
-### Stat Tile
-**Role:** Large numeric metric
-
-Anton value at 42–56px over a JetBrains Mono uppercase label. Tile fill rotates through aqua, coral, sun and white; the label and value stay ink on all four.
 
 ### Footer
 **Role:** Page-end contact block
@@ -173,6 +178,7 @@ Deep navy ink ground, warm paper headline, pale periwinkle body copy, periwinkle
 - Reserve JetBrains Mono for uppercase micro-labels only — eyebrows, indices, captions, tags.
 - Give buttons and tags horizontal padding of at least half their height so the pill curve never crowds the label.
 - Use `2px` outlines consistently; this system has one border weight.
+- Put the work first. Story, roles and stats belong in the two-card glance row under the hero, never as a section the reader has to get past.
 
 ### Don't
 - Never apply a drop shadow, inner shadow, or offset "sticker" shadow to any element — the system is flat and separation comes from colour and outline.
@@ -182,6 +188,8 @@ Deep navy ink ground, warm paper headline, pale periwinkle body copy, periwinkle
 - Never introduce a hue outside the palette. The client logo colours are content that appears inside reproduced marks, not chrome to design with.
 - Never use a gradient. Every surface is one flat tone.
 - Never mix radius values — a `12px` or `24px` corner anywhere breaks the two-shape rule.
+- Never run the page as a stack of accordions. One toggle survives — the "+ More" banners panel — and everything else is open.
+- Never set white type on Signal Coral. Coral takes ink, the same as the buttons do.
 
 ## Surfaces
 
@@ -202,7 +210,14 @@ Photography is retail-real: in-store displays, event signage, product shots, and
 
 ## Layout
 
-Centred 1180px column with full-bleed colour bands breaking out to the viewport edge. The rhythm is band → paper → band, with 72–96px of vertical space between sections and no divider rules. The hero is a two-column split: Anton headline, eyebrow tag and pill buttons on the left, artwork on the right. Below it, sections alternate between a stat row, two-up feature cards, and collapsible fold sections whose heads carry a mono index, an eyebrow tag, an Anton title and the square accordion toggle. The footer is a full-bleed ink band with centred type.
+Centred 1180px column with full-bleed colour bands breaking out to the viewport edge. The rhythm is band → paper → band, with 72–96px of vertical space between sections and no divider rules. The page is built work-first and reads in this order:
+
+1. **Hero** — a two-column split on the cobalt band: eyebrow tag, Anton headline with the pressable number highlights, lede and pill buttons on the left, the work collage on the right.
+2. **Glance row** — two cards on a banded paper section, *The job* and *The outcome*. This replaces the stat row and the three-paragraph story section; everything descriptive lives here.
+3. **The work, open** — three numbered sections, each a mono index, eyebrow tag, Anton title and optional one-line gist, then the work at full width. **01 is Visual identity** — the brand system the rest was built on — followed by **02 What I did** and **03 Selected work**. No toggles.
+4. **Footer** — a full-bleed ink band with centred type.
+
+The one thing still behind a click is the "+ More" card at the end of Selected Work, which folds out into the web banners, register ads and store signage. That is the exception, not the pattern: never run the page as a stack of accordions, and never put a stat row or a story section between the reader and the work.
 
 ## Agent Prompt Guide
 
