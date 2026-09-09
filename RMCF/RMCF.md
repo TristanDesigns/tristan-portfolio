@@ -163,7 +163,11 @@ The standard Card — Riser fill on the black stage, `1px` hairline, `9px` radiu
 ### Brand Kit
 **Role:** The body of section 01, Brand identity
 
-A four-column strip at 28px gaps, filling the section body on a Riser room: the lockup in a hairline 9px frame on Stage Black (200px), the palette as four 64px swatches in a 2×2 (150px), the typefaces as Anton 26px names over Inter 13px ash-dim notes between hairline rules, and the icon marks as Stage Black pills. Column labels (*Palette*, *Type*, *Icons*) are Inter 600 12px uppercase in ash-dim, one step quieter than the section's gold tag. Collapses to one column under 820px. No card chrome — it is section content, not a tile.
+From 900px up the section is a two-column split at a 48px gutter: the **lockup takes the left column outright** at roughly a 1 : 2.45 ratio, square, running the full height of the section; the headline and gist sit at the top of the right column, and the kit strip sits 44px beneath them. The lockup is the largest single artwork on the page, which is the point — it is the mark everything below was built from, so it gets to be seen rather than filed in a row of thumbnails.
+
+The kit strip itself is three columns at 28px gaps: the palette as four 64px swatches in a 2×2 (150px), the typefaces as Anton 26px names over Inter 13px ash-dim notes between hairline rules, and the icon marks as Stage Black pills. Column labels (*Palette*, *Type*, *Icons*) are Inter 600 12px uppercase in ash-dim, one step quieter than the section's gold tag. No card chrome — it is section content, not a tile.
+
+Below 900px the whole thing is one column reading tag → headline → gist → lockup → palette → type → icons, with the lockup full width. Two notes for anyone rebuilding it: the right-hand column is its own box rather than the lockup spanning two grid rows, because a spanning item sizes the row it spans and shoves the kit halfway down the page; and `image-slot` rewrites its own `class` attribute, so the lockup cannot be targeted by class — order the elements around it instead.
 
 ### Open Section Head
 **Role:** Heading for a work section that is always visible
