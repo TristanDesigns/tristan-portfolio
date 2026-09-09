@@ -155,15 +155,24 @@ Here it is a deep navy ink band with a `2px` ink rule beneath, the wordmark in w
 
 Two cards side by side on a banded paper section — the only place on the page where the job is described rather than shown. The first is the standard Card (white, `2px` ink outline, no shadow, 26/28px padding) carrying an eyebrow tag and a single paragraph at body-large. The second inverts to Signal Coral with its line set in Anton uppercase at pull-quote size — the outcome, and the loudest thing on the page after the hero. On coral the type is **ink, not white**: the page already pairs coral with ink on every button, and white on this coral is only 3.1:1. Its tag flips to a white fill with an ink label. Two across, never three; if a fact does not fit in one of the two, it belongs in a work section or nowhere.
 
+### Star Toggle
+**Role:** The page's one deliberate click, sitting on the seam under the brief
+
+A `84px` Bright Sun star with a `2.5px` ink outline and a `3.4px` ink plus through the middle, centred on the boundary between the glance row and the band below it — half on the paper, half on the cobalt, so it belongs to neither and reads as a thing placed on the page rather than a control inside a section. On open the vertical stroke collapses to a minus; on hover the whole star turns 14°. No shadow, no fill change, and no visible label — the star is the affordance. Its accessible name toggles between *Show what I did* and *Hide what I did*, and it drops to `68px` under 640px.
+
+It reveals the two blocks behind the job: **What I did** (the six things I owned) and the **company structure** band. Folded in, the page runs straight from the brief into Visual identity. Exactly one of these per page — a second would make it a menu.
+
 ### Open Section Head
-**Role:** Heading for a work section — every section on the page uses this
+**Role:** Heading for a work section
 
 The fold head with the toggle removed: a two-column grid of `[mono index] [title block]`, 22/26px gaps. The title block is an eyebrow tag, an Anton uppercase title, then an optional one-line gist in the section's muted tone. The work follows after 44px at full width. A gist earns its place only when it says something the title and the work do not.
 
-### Accordion Toggle
-**Role:** Expand/collapse control — now used only by the "+ More" panel in Selected Work
+**Indexed and unindexed.** Only the numbered work carries a mono index. A section that lives behind the star is detail about the job rather than a piece of work, so it drops the index and the head collapses to a single column — the count stays clean at 01 and 02 no matter which way the star is set.
 
-`52px` square, white fill, `2px` ink outline, `6px` radius, no shadow and no transform on press. Contains a star mark at `2.5px` stroke plus a `3px` plus/minus stroke; the plus collapses to a minus on open and the star fills with Bright Sun. Nothing else on the page hides behind a toggle.
+### Accordion Toggle
+**Role:** Expand/collapse control — used only by the "+ More" panel in Selected Work
+
+`52px` square, white fill, `2px` ink outline, `6px` radius, no shadow and no transform on press. Contains a star mark at `2.5px` stroke plus a `3px` plus/minus stroke; the plus collapses to a minus on open and the star fills with Bright Sun. It shares its star and its plus with the Star Toggle above, at a quieter size — the two are the same gesture, one for the job and one for the work.
 
 ### Fold Index
 **Role:** Numeric marker beside a section heading
@@ -195,7 +204,7 @@ Deep navy ink ground, warm paper headline, pale periwinkle body copy, periwinkle
 - Never introduce a hue outside the palette. The client logo colours are content that appears inside reproduced marks, not chrome to design with.
 - Never use a gradient. Every surface is one flat tone.
 - Never mix radius values — a `12px` or `24px` corner anywhere breaks the two-shape rule.
-- Never run the page as a stack of accordions. One toggle survives — the "+ More" banners panel — and everything else is open.
+- Never run the page as a stack of accordions. Two toggles exist — the seam star and the "+ More" banners panel — and every numbered section stays open.
 - Never set white type on Signal Coral. Coral takes ink, the same as the buttons do.
 
 ## Surfaces
@@ -221,10 +230,11 @@ Centred 1180px column with full-bleed colour bands breaking out to the viewport 
 
 1. **Hero** — a two-column split on the cobalt band: eyebrow tag, Anton headline with the pressable number highlights, lede and pill buttons on the left, the work collage on the right.
 2. **Glance row** — two cards on a banded paper section, *The job* and *The outcome*. This replaces the stat row and the three-paragraph story section; everything descriptive lives here.
-3. **The work, open** — three numbered sections, each a mono index, eyebrow tag, Anton title and optional one-line gist, then the work at full width. **01 is Visual identity** — the brand system the rest was built on — followed by **02 What I did** and **03 Selected work**. No toggles.
-4. **Footer** — a full-bleed ink band with centred type.
+3. **The star** — sitting on the seam directly under the glance row, between *The job* and *The outcome*. It folds out **What I did** (six role cards on a cobalt band) and the **company structure** (five brands and two festivals, on paper). Both are unnumbered: they explain the job rather than show the work.
+4. **The work, open** — two numbered sections, each a mono index, eyebrow tag, Anton title and optional one-line gist, then the work at full width. **01 Visual identity** — the brand system the rest was built on — then **02 Selected work**.
+5. **Footer** — a full-bleed ink band with centred type.
 
-The one thing still behind a click is the "+ More" card at the end of Selected Work, which folds out into the web banners, register ads and store signage. That is the exception, not the pattern: never run the page as a stack of accordions, and never put a stat row or a story section between the reader and the work.
+Two things on the page are behind a click, and both are stars: the seam star for the detail behind the job, and the "+ More" card at the end of Selected Work for the web banners, register ads and store signage. Nothing else. Never run the page as a stack of accordions, never hide a numbered section behind one, and never put a stat row or a story section between the reader and the work.
 
 ## Agent Prompt Guide
 
