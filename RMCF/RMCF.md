@@ -148,8 +148,18 @@ Riser fill, `9px` radius, `1px` hairline border, no shadow, 24–36px padding. A
 
 Playfair Display 500 at 28px in Burnished Gold, sentence case, no quotation-mark ornament, no card — it sits directly on the black ground with a `1px` lime rule above it and 36px of clearance on both sides.
 
+### Glance Stub
+**Role:** The brief in three tiles, directly under the hero
+
+Stage Black fill on a Riser room, `1px` hairline, `9px` radius, 24px/26px padding. A gold VT323 label (*The job*, *What I did*, *The outcome*), then either Inter 16.5px ash prose or a wrapped row of hairline ticket chips. The outcome stub inverts to Festival Lime with all type in Stage Black and its line set in Anton uppercase at 22–28px — the one lime surface in the row. Three per page, never more, never fewer.
+
+### Open Section Head
+**Role:** Heading for a work section that is always visible
+
+The fold head without the toggle: `[index] [title block]` in a two-column grid. Index is the ticket chip, title block is gold ticket chip, Anton title, optional one-line gist in ash-dim. The work follows after 44px. Use this for every section that shows work; reserve the fold head for the single "how it was built" section.
+
 ### Accordion Toggle
-**Role:** Expand/collapse on fold sections
+**Role:** Expand/collapse on the one fold section per page
 
 `52px` square, transparent fill, `1px` hairline border, `9px` radius. Star mark at `1.5px` hairline stroke, plus/minus at `2px` in bone. On open, the plus collapses to a minus and the star fills Festival Lime. No shadow, no press transform.
 
@@ -168,7 +178,8 @@ Stage Black ground above a checkerboard band. Anton headline in bone, ash body, 
 ### Do
 - Keep the page overwhelmingly black. Lime, gold and ash are marks *on* the room, not the room itself.
 - Set every headline in Anton uppercase at a line height of 0.88–0.95 so multi-line headlines stack as one block.
-- Use lime for exactly three jobs: ornament, the primary button, and the open-accordion mark.
+- Use lime for a short list of jobs only: ornament, the primary button, the open-accordion mark, the outcome stub in the glance row, and the alternate campaign frames. Nothing else.
+- Put the work first. Anything that describes the work — story, roles, process, stats — lives in the glance row or the single fold at the end, never between the reader and the work.
 - Use gold for marks and editorial voice — logo lockup, year badges, serif pull quotes — never as a button fill.
 - Set body copy in ash `#C9C5BC`, not bone; reserve bone for headlines and numbers that must out-read the body.
 - Keep every rule, card edge and divider on the single hairline value. One border colour, one weight.
@@ -184,6 +195,7 @@ Stage Black ground above a checkerboard band. Anton headline in bone, ash body, 
 - Never tint, duotone or desaturate the festival photography to match the palette.
 - Never use a radius outside the set — `9px` containers, `22px` buttons, `4px` ticket chips.
 - Never introduce a fourth hue. If something needs to stand apart, change its surface level or its type weight.
+- Never run the page as a stack of folds. One accordion, last. Never a stats band, and never a pull quote that restates the paragraph beside it.
 
 ## Surfaces
 
@@ -203,7 +215,15 @@ Two modes. The first is festival photography — crowds, tents, vendor booths, c
 
 ## Layout
 
-Centred 1180px column on a black ground, with the checkerboard band directly under the header and again above the footer. The hero is a full-viewport black stage: gold year chip, Anton headline at up to 88px, a row of ticket chips for the disciplines, then lead copy in ash. Below the hero the page runs as numbered fold sections — mono index, ticket chip, Anton title, hairline-bordered toggle — separated by 80–120px of black. One section per page inverts to the lime room. Pull quotes break the rhythm as single gold serif lines on bare black with a lime rule above. Media sits in hairline frames, either full-width or as a two-up grid. The footer closes on black beneath the second checkerboard band.
+Centred 1180px column on a black ground, with the checkerboard band directly under the hero and again above the footer. The page is built work-first and reads in this order:
+
+1. **Hero** — full-viewport video stage: gold year chip, Anton headline at up to 88px, a row of ticket chips that jump to each section, then a single line of lead copy in ash. The hero says what the job was in one sentence and nothing more.
+2. **Glance row** — three ticket stubs directly under the checkerboard band: *The job*, *What I did* (as ticket chips), *The outcome*. The outcome stub is punched lime with black type; it is the one lime surface in the row and the loudest thing on the page after the hero. This row replaces stats bands, story paragraphs and "what I did" prose — if it does not fit in a stub, it does not go on the page.
+3. **The work, open** — Campaigns, Photography, Film and Evolution run as numbered open sections: mono index, ticket chip, Anton title, an optional one-line gist, then the work itself at full width. No toggle, nothing to click. A gist earns its place only when it says something the title and the work do not.
+4. **One fold** — *How it was built* is the single accordion on the page, last, for the reader who wants the palette, type and lockup. Never more than one fold per page; the moment there are two, the work is being hidden again.
+5. **Footer** — the second checkerboard band, then the sign-off on black.
+
+Media sits in hairline frames, either full-width or as a grid. Sections alternate Stage Black and Riser rooms, separated by 80–120px.
 
 ## Agent Prompt Guide
 
@@ -228,6 +248,10 @@ Centred 1180px column on a black ground, with the checkerboard band directly und
 4. **Pull quote** — No card. A 1px `#A8D24E` rule, 24px gap, then Playfair Display 500 at 28px in `#C9A24B`, sentence case, max-width 46ch, 36px clearance left and right. Nothing else in the band.
 
 5. **Work card** — `#141414` fill, 9px radius, 1px hairline border, 28px padding, no shadow. Media at 9px radius full saturation, Anton 28px uppercase title in `#F2EFE6`, Inter 15px body in `#C9C5BC`, optional gold ticket chip at the foot.
+
+6. **Glance row** — Three-column grid, 24px gap, on a `#141414` room. Each stub `#0A0A0A` fill, 1px hairline, 9px radius, 24px/26px padding. Label in VT323 15px uppercase `+0.08em` `#C9A24B`. Body in Inter 16.5px `#C9C5BC` at 1.55, or a wrapped row of hairline ticket chips. Third stub fills `#A8D24E` with every line in `#0A0A0A`, body set in Anton uppercase `clamp(22px,2.2vw,28px)` at 1.05. Collapses to one column under 820px.
+
+7. **Open section head** — Two-column grid `[index] [title block]`, 26px gap, no toggle. Index and title block exactly as the fold head. The work follows after 44px, full width.
 
 ## Where the three sources land
 
