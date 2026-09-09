@@ -158,6 +158,19 @@ Background #f5f5f5, text #737373, radius 18px, padding 8px 10px, with a keyboard
 
 Text or icon in #e7000b against the monochromatic palette. The red is the only chromatic hue in the system and appears exclusively in destructive or error contexts — it never decorates.
 
+### Fold Demo
+**Role:** The hero's right-hand column — a carton that folds from flat dieline to finished box
+
+The one piece of motion in the system, and the page's thesis made touchable: the hero headline says "turning flat art into physical displays", so the hero shows exactly that happening. It lives in a standard Card (white, 1px hairline, 24px radius, whisper shadow) split into a scene and a control strip.
+
+**Scene.** A #fafafa ground carrying a 26px #e5e5e5 grid — a cutting mat, and the only patterned surface in the system. Inside it every panel of the carton is a plain div hinged off its neighbour in the order a real carton folds: front → sides → back → glue flap, with tuck, dust and bottom flaps hanging off their own panels. One progress value drives every hinge, each one lagging the last by its depth in that chain, so the box assembles outward from the front rather than snapping shut at once. CSS 3D transforms only — no WebGL, no 3D library, nothing fetched from a CDN.
+
+**Face shading.** Faces are tinted by which way they end up pointing, on a neutral ramp that never leaves the greyscale: front `#ffffff`, sides `#f1f1f1`, back `#f7f7f7`, bottom flaps `#efefef`, top flaps and glue `#e9e9e9`, all edged in a `#d4d4d4` hairline. Flat, that shading reads as a colour-coded dieline proof; folded, it reads as light falling on a solid. This is the one place a shade outside the four surface tokens is allowed, because it is describing an object rather than a UI surface.
+
+**Labels.** Panel names (FRONT, BACK, L, R, TUCK, BOTTOM) in Geist 9px/500 uppercase `#737373`, fading out over the first fifth of the fold — they belong to the drawing, not to the finished box.
+
+**Control strip.** A hairline-topped white bar: `Flat`, a range input, `Folded`, and a tabular percentage. The track is a 2px `#e5e5e5` rule; the thumb is a 14px `#0a0a0a` dot. It folds itself once, 2.4s, the first time it scrolls into view, then hands control to the reader. Under `prefers-reduced-motion` it starts folded and never animates.
+
 ## Do's and Don'ts
 
 ### Do
@@ -194,11 +207,11 @@ Text or icon in #e7000b against the monochromatic palette. The red is the only c
 
 ## Imagery
 
-Minimal imagery — the system is almost entirely UI. No hero photography, no illustrations, no decorative graphics. Product showcases are rendered as component mockups (cards, inputs, buttons) in a grid, serving as both documentation and visual content. Icons are thin-stroke geometric marks (likely Lucide-derived) at 1.5–2px stroke weight in #0a0a0a or #737373, used sparingly as functional cues. The visual language IS the UI components themselves — the page functions as a living style guide where every visible element is a design token made visible.
+Minimal imagery — the system is almost entirely UI. No hero photography, no illustrations, no decorative graphics. The single exception is the hero's **Fold Demo**: a carton built from live DOM panels rather than a picture of one, which earns its place because it is the subject of the page rather than decoration around it. Product showcases are rendered as component mockups (cards, inputs, buttons) in a grid, serving as both documentation and visual content. Icons are thin-stroke geometric marks (likely Lucide-derived) at 1.5–2px stroke weight in #0a0a0a or #737373, used sparingly as functional cues. The visual language IS the UI components themselves — the page functions as a living style guide where every visible element is a design token made visible.
 
 ## Layout
 
-Centered max-width 1280px column on the #f5f5f5 canvas, with 48–80px between major sections and a compact 8px element gap inside components. Cards sit in even grids at 20px padding, each defined by its 1px hairline and whisper-quiet shadow rather than by spacing alone. Navigation is a #fafafa sidebar sitting one tonal step off the canvas with no divider rule. Content hierarchy is carried entirely by type scale and tonal surface stacking — there are no colored section bands, no full-bleed breakouts, and no dividers between blocks.
+The hero is a two-column split — the headline, lede and buttons on the left, the Fold Demo card filling the right — collapsing to one column under 860px. Below it, a centered max-width 1280px column on the #f5f5f5 canvas, with 48–80px between major sections and a compact 8px element gap inside components. Cards sit in even grids at 20px padding, each defined by its 1px hairline and whisper-quiet shadow rather than by spacing alone. Navigation is a #fafafa sidebar sitting one tonal step off the canvas with no divider rule. Content hierarchy is carried entirely by type scale and tonal surface stacking — there are no colored section bands, no full-bleed breakouts, and no dividers between blocks.
 
 ## Agent Prompt Guide
 
