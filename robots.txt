@@ -1,0 +1,13 @@
+# tristan.design
+User-agent: *
+Allow: /
+
+# Style references are kept online for reference, not for search results.
+Disallow: /RMCF/RMCF.md
+Disallow: /SF/SF.md
+Disallow: /USDG/USDG.md
+
+# /share/ is deliberately crawlable — social crawlers must fetch og:image
+# from here, and blocking it would break every link preview.
+
+Sitemap: https://tristan.design/sitemap.xml
