@@ -1,4 +1,4 @@
-# Smoker Friendly — Style Reference
+﻿# Smoker Friendly — Style Reference
 
 > Flying Papers structure, Smoker Friendly colour
 

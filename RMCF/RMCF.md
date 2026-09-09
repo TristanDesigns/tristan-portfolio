@@ -1,4 +1,4 @@
-# Rocky Mountain Cigar Festival — Style Reference
+﻿# Rocky Mountain Cigar Festival — Style Reference
 
 > Lime and gold marquee on a blacked-out room
 

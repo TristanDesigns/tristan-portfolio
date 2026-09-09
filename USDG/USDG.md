@@ -1,4 +1,4 @@
-# US Display Group — Style Reference
+﻿# US Display Group — Style Reference
 
 > clinical blueprint on frosted paper
 

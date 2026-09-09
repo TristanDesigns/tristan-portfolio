@@ -1,0 +1,6 @@
+# Style-reference .md files are served as text/plain with no charset, so
+# browsers fall back to latin-1 and mangle the em dashes and curly quotes.
+# AddCharset alone was ignored here, so force the full type + charset.
+<FilesMatch "\.md$">
+  ForceType 'text/plain; charset=UTF-8'
+</FilesMatch>
