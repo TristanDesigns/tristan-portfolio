@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About — Tristan Brewer</title>
+<meta name="description" content="How Tristan Brewer got here: East Tennessee State University, a first design job at US Display Group, nine years with Smoker Friendly and the Rocky Mountain Cigar Festival, and a decade of relearning the craft.">
+<meta name="author" content="Tristan Brewer">
+<link rel="canonical" href="https://tristan.design/about/">
+<meta name="theme-color" content="#FFF9EF">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="Tristan Brewer">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://tristan.design/about/">
+<meta property="og:title" content="About — Tristan Brewer">
+<meta property="og:description" content="How Tristan Brewer got here: East Tennessee State University, a first design job at US Display Group, nine years with Smoker Friendly and the Rocky Mountain Cigar Festival, and a decade of relearning the craft.">
+<meta property="og:image" content="https://tristan.design/share/home.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Tristan Brewer — designer, illustrator and marketer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About — Tristan Brewer">
+<meta name="twitter:description" content="How Tristan Brewer got here: ETSU, US Display Group, Smoker Friendly and the Rocky Mountain Cigar Festival, and a decade of relearning the craft.">
+<meta name="twitter:image" content="https://tristan.design/share/home.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;600&family=Shrikhand&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   About — the landing page's own paper panel, given a page.
+   Same ground, ink, rules and type as #tl-more on the front
+   door, because this is Tristan's voice rather than a client's.
+   ============================================================ */
+*{box-sizing:border-box}
+:root{--paper:#FFF9EF;--ink:#12111A;--rule:#12111A}
+html{scroll-padding-top:86px}
+body{margin:0;background:var(--paper);color:var(--ink);
+  font-family:'Figtree',ui-sans-serif,system-ui,sans-serif;font-size:16px;line-height:1.55;
+  -webkit-font-smoothing:antialiased}
+a{color:inherit}
+
+/* ---- nav: the shared bar, only present on the way up ---- */
+.pnav{position:sticky;top:0;z-index:80;background:var(--paper);border-bottom:5px solid var(--ink);
+  transition:transform .28s cubic-bezier(.2,.7,.2,1)}
+.pnav.is-away{transform:translateY(-100%)}
+.pnav-inner{max-width:720px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;
+  justify-content:space-between;gap:22px}
+.home-mark{font-family:'Shrikhand',cursive;font-size:22px;line-height:1;text-decoration:none;padding:2px}
+.home-mark:focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-radius:6px}
+.pnav-links{display:flex;align-items:center;gap:20px}
+.pnav-links a{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:12px;
+  letter-spacing:.05em;text-decoration:none;opacity:.62;transition:opacity .18s ease}
+.pnav-links a:hover{opacity:1}
+.pnav-links a:focus-visible{outline:3px solid var(--ink);outline-offset:4px;border-radius:4px}
+@media(prefers-reduced-motion:reduce){.pnav{transition:none}}
+@media(max-width:760px){.pnav-links{display:none}}
+
+/* ---- page ---- */
+.ab{max-width:720px;margin:0 auto;padding:96px 24px 160px}
+.ab-h{font-family:'Shrikhand',cursive;font-size:clamp(40px,9vw,72px);line-height:1;
+  text-align:right;margin:0 0 28px}
+.ab-lede{font-size:19px;line-height:1.5;max-width:46ch;margin:0 0 72px}
+
+/* ---- the timeline ---- */
+.ab-list{list-style:none;margin:0;padding:0}
+.ab-row{display:grid;grid-template-columns:minmax(0,150px) minmax(0,1fr);gap:8px 26px;
+  padding:24px 4px;border-bottom:1.5px solid var(--rule)}
+.ab-row:first-child{border-top:1.5px solid var(--rule)}
+.ab-when{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:12px;
+  letter-spacing:.05em;line-height:1.65}
+.ab-row p{margin:0}
+@media(max-width:560px){.ab-row{grid-template-columns:1fr;gap:4px}}
+
+/* ---- where the work lives: the front door's link rows ---- */
+.ab-more{margin-top:104px}
+.ab-sub{font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(15px,2.6vw,19px);letter-spacing:.06em;margin:0 0 26px;text-align:right}
+.ab-links{display:flex;flex-direction:column}
+.ab-link{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 4px;
+  text-decoration:none;border-bottom:5px solid var(--ink)}
+.ab-link span{font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(17px,3.2vw,25px);letter-spacing:.01em;line-height:1.2;
+  text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px}
+.ab-link svg{width:32px;height:32px;flex:none;fill:var(--acc,#D8FF3E);stroke:var(--ink);
+  stroke-width:3;stroke-linejoin:round;stroke-linecap:round;overflow:visible;
+  transition:transform .3s cubic-bezier(.2,.7,.2,1)}
+.ab-link:hover svg,.ab-link:focus-visible svg{transform:rotate(18deg) scale(1.12)}
+.ab-link:focus-visible{outline:3px solid var(--ink);outline-offset:6px}
+@media(prefers-reduced-motion:reduce){.ab-link svg{transition:none}}
+
+/* ---- contact ---- */
+.ab-contact{margin-top:104px;padding-top:40px;border-top:5px solid var(--ink)}
+.ab-mail{font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:clamp(19px,4.4vw,32px);letter-spacing:.01em;line-height:1.15;
+  text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:7px;
+  display:inline-block;word-break:break-word}
+.ab-mail:focus-visible{outline:3px solid var(--ink);outline-offset:6px}
+.ab-back{display:inline-block;margin-top:36px;font-size:15px;opacity:.62}
+.ab-back:hover{opacity:1}
+@media(max-width:640px){.ab{padding:72px 20px 120px}}
+</style>
+</head>
+<body>
+
+<nav class="pnav">
+  <div class="pnav-inner">
+    <a class="home-mark" href="/" aria-label="Back to Tristan's portfolio">tristan</a>
+    <div class="pnav-links">
+      <a href="/RMCF/">RMCF</a>
+      <a href="/SF/">Smoker Friendly</a>
+      <a href="/us-display-group/">US Display Group</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<main class="ab">
+  <h1 class="ab-h">about</h1>
+  <p class="ab-lede">Designer, illustrator and marketer. The short version of how I got here.</p>
+
+  <ol class="ab-list">
+    <li class="ab-row">
+      <span class="ab-when">2006 &ndash; 2010</span>
+      <p>College at East Tennessee State University.</p>
+    </li>
+    <li class="ab-row">
+      <span class="ab-when">First big job</span>
+      <p>US Display Group &mdash; my first real graphic design job. Art, dielines, prepress, printing and cutting for corrugated retail displays.</p>
+    </li>
+    <li class="ab-row">
+      <span class="ab-when">2017</span>
+      <p>Smoker Friendly got in touch and hired me &mdash; the Rocky Mountain Cigar Festival, and the brand across their stores.</p>
+    </li>
+    <li class="ab-row">
+      <span class="ab-when">The 2020s</span>
+      <p>Began re-educating myself on the new processes coming out of the technological changes in design.</p>
+    </li>
+  </ol>
+
+  <section class="ab-more">
+    <h2 class="ab-sub">Where that work lives</h2>
+    <div class="ab-links">
+      <a class="ab-link" href="/RMCF/" style="--acc:#D8FF3E">
+        <span>Rocky Mountain Cigar Festival</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="18"/></svg>
+      </a>
+      <a class="ab-link" href="/SF/" style="--acc:#6FD6E8">
+        <span>Smoker Friendly</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><polygon points="24,3 30.2,17.2 45.6,18.4 33.9,28.4 37.5,43.5 24,35.5 10.5,43.5 14.1,28.4 2.4,18.4 17.8,17.2"/></svg>
+      </a>
+      <a class="ab-link" href="/us-display-group/" style="--acc:#FFC845">
+        <span>US Display Group</span>
+        <svg viewBox="0 0 48 48" aria-hidden="true"><rect x="7" y="7" width="34" height="34" rx="4"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <section class="ab-contact" id="contact">
+    <h2 class="ab-sub">Say hello</h2>
+    <a class="ab-mail" href="mailto:brewer.tristan@gmail.com">brewer.tristan@gmail.com</a>
+    <a class="ab-back" href="/">&larr; Back to the portfolio</a>
+  </section>
+</main>
+
+<script>
+/* The nav is only present on the way up — same behaviour as every other
+   page on the site. */
+(function(){
+  var nav = null, last = window.scrollY || 0, ticking = false;
+  var TOP = 80, STEP = 6;
+  function update(){
+    ticking = false;
+    if (!nav) { nav = document.querySelector('.pnav'); if (!nav) return; }
+    var y = window.scrollY || 0;
+    if (y <= TOP) { nav.classList.remove('is-away'); last = y; return; }
+    var d = y - last;
+    if (Math.abs(d) < STEP) return;
+    nav.classList.toggle('is-away', d > 0);
+    last = y;
+  }
+  addEventListener('scroll', function(){
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  addEventListener('resize', update, { passive: true });
+  update();
+})();
+</script>
+
+</body>
+</html>
