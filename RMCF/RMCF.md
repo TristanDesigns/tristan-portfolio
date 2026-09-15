@@ -205,7 +205,7 @@ Stage Black ground above a checkerboard band. Anton headline in bone, ash body, 
 ### Don't
 - Never put lime text on gold, or gold text on lime — the two accents are close in luminance and the pairing is unreadable.
 - Never add a shadow, glow, or bevel. Elevation is one step of surface lightness plus a hairline.
-- Never set Anton below 28px or above 0.95 line height; Inter handles everything smaller and the loose leading kills the marquee.
+- Never set Anton below 28px or above 0.95 line height **on desktop**; Inter handles everything smaller and the loose leading kills the marquee. Below 760px headings relax to `1.05` and the highlight pill to `.85` — at phone widths a headline wraps to three lines and 0.9 leading makes it collide with itself.
 - Never use VT323 for a sentence, and never in lowercase.
 - Never run two non-black colour rooms back to back, and never more than one lime room on a page.
 - Never tint, duotone or desaturate the festival photography to match the palette.

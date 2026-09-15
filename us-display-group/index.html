@@ -542,6 +542,15 @@ h3,h4{letter-spacing:-.025em !important}
 @media (max-width:760px){.pnav-links{display:none}}
 section[id],footer[id]{scroll-margin-top:78px}
 
+/* ---- phones: a little more air under wrapped headings ----------------
+   Geist is nowhere near as tight as Anton, and the hero pill already fits
+   its line exactly — but exactly is no margin at all, and a two-line h3
+   at 1.05 reads cramped on a phone. */
+@media (max-width:760px){
+  h1{line-height:1.15 !important}
+  h3,h4{line-height:1.15 !important}
+}
+
 /* ---- footer: the dark inversion ---- */
 .contact{background:var(--ink-1) !important;color:#fafafa !important}
 .contact h2{color:#fafafa !important}

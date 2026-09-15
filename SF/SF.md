@@ -198,7 +198,7 @@ Deep navy ink ground, warm paper headline, pale periwinkle body copy, periwinkle
 
 ### Don't
 - Never apply a drop shadow, inner shadow, or offset "sticker" shadow to any element — the system is flat and separation comes from colour and outline.
-- Never bold Anton or set it at a line height above 1.05; both destroy the stacked-block effect.
+- Never bold Anton or set it at a line height above 1.05; both destroy the stacked-block effect. On phones headings sit at exactly `1.05` and the pressable pills drop to `.85` — at 0.92 a 44px pill cuts through the 37px line below it.
 - Never use Anton below 26px — it is a display face only, and Inter handles everything smaller.
 - Never place a chromatic band directly against another chromatic band; a paper band must separate them.
 - Never introduce a hue outside the palette. The client logo colours are content that appears inside reproduced marks, not chrome to design with.
