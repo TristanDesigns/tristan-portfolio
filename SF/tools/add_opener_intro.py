@@ -6,7 +6,7 @@ inside <script type="__bundler/manifest"> (asset 05706c89-...), so the JSX is de
 patched and packed back.
 
 Video assets it expects in SF/assets/video: sf-reel-{1080,720}.mp4 + sf-reel-poster.jpg (landscape: the full linked SF reel, 50.9 s)
-and sf-opener-mobile-{1080,720}.mp4 + sf-opener-mobile-poster.jpg (portrait, used on tall screens)
+and sf-reel-mobile-{1080,720}.mp4 + sf-reel-mobile-poster.jpg (portrait twin of the reel, used on tall screens)
 """
 import base64, gzip, json, re, subprocess, sys, os
 
@@ -32,7 +32,7 @@ def rep(old, new, count=1):
     jsx = jsx.replace(old, new)
 
 INTRO = r'''
-/* Landing intro. The SF reel loops full-screen (phones and upright tablets get the portrait opener);
+/* Landing intro. The SF reel loops full-screen (phones and upright tablets get its portrait twin);
    the first scroll freezes it on the logo (each clip's first frame, its holds and its last frame are that exact still)
    and the logo glides onto the hero collage's logo tile while the page slides into place.
    Scrolling back to the top restarts the loop from the logo, so the handoff is seamless. */
@@ -40,8 +40,8 @@ const OPENERS = {
   /* landscape clip: covers the screen, logo capped at 80% of the width */
   /* still: seconds where the frame is the logo still, so freezing there needs no crossfade */
   wide: { file: 'sf-reel', w: 1920, h: 1080, logo: { x: 581.56, y: 257.21, w: 758.17, h: 566.15 }, fit: 'cover', still: [[0, 0.1], [2.40, 2.84], [6.84, 7.24], [50.42, 99]] },
-  /* portrait clip for phones: shown whole so every piece of the explosion stays on screen */
-  tall: { file: 'sf-opener-mobile', w: 1080, h: 1920, logo: { x: 119.13, y: 645.50, w: 843.19, h: 629.63 }, fit: 'contain', still: [[0, 0.14], [2.40, 2.84], [7.78, 99]] }
+  /* portrait twin of the reel for phones: shown whole so every piece of the explosion stays on screen */
+  tall: { file: 'sf-reel-mobile', w: 1080, h: 1920, logo: { x: 119.13, y: 645.50, w: 843.19, h: 629.63 }, fit: 'contain', still: [[0, 0.1], [2.40, 2.84], [6.84, 7.24], [50.12, 99]] }
 };
 const pickOpener = () => (innerHeight > innerWidth * 1.1 ? 'tall' : 'wide');
 function openerScale(O) {
