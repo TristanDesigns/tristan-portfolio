@@ -41,7 +41,7 @@ const OPENERS = {
   /* still: seconds where the frame is the logo still, so freezing there needs no crossfade */
   wide: { file: 'sf-reel', w: 1920, h: 1080, logo: { x: 581.56, y: 257.21, w: 758.17, h: 566.15 }, fit: 'cover', still: [[0, 0.1], [2.40, 2.84], [6.84, 7.24], [50.42, 99]] },
   /* portrait twin of the reel for phones: shown whole so every piece of the explosion stays on screen */
-  tall: { file: 'sf-reel-mobile', w: 1080, h: 1920, logo: { x: 119.13, y: 645.50, w: 843.19, h: 629.63 }, fit: 'contain', still: [[0, 0.1], [2.40, 2.84], [6.84, 7.24], [50.12, 99]] }
+  tall: { file: 'sf-reel-mobile', w: 1080, h: 1920, logo: { x: 119.13, y: 645.50, w: 843.19, h: 629.63 }, fit: 'contain', still: [[0, 0.1], [2.40, 2.84], [6.84, 7.24], [50.15, 99]] }
 };
 const pickOpener = () => (innerHeight > innerWidth * 1.1 ? 'tall' : 'wide');
 function openerScale(O) {
