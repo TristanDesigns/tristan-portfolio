@@ -16,14 +16,14 @@
 <meta property="og:url" content="https://tristan.design/about/">
 <meta property="og:title" content="About — Tristan Brewer">
 <meta property="og:description" content="Northern Colorado designer, illustrator and marketer, open to full-time and contract work. How Tristan Brewer got here: East Tennessee State University 2006-2010, US Display Group 2014-2016, nine years with Smoker Friendly and the Rocky Mountain Cigar Festival from 2017, a decade of relearning the craft, and Sea of Grass founded in 2025.">
-<meta property="og:image" content="https://tristan.design/share/home.png">
+<meta property="og:image" content="https://tristan.design/share/og-about.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="Tristan Brewer — designer, illustrator and marketer">
+<meta property="og:image:alt" content="About Tristan Brewer: a timeline from ETSU in 2006 through US Display Group, Smoker Friendly and RMCF to Sea of Grass">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="About — Tristan Brewer">
 <meta name="twitter:description" content="How Tristan Brewer got here: ETSU, US Display Group, Smoker Friendly and the Rocky Mountain Cigar Festival, a decade of relearning the craft, and Sea of Grass.">
-<meta name="twitter:image" content="https://tristan.design/share/home.png">
+<meta name="twitter:image" content="https://tristan.design/share/og-about.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Figtree:wght@400;600&family=Shrikhand&display=swap" rel="stylesheet">
@@ -103,6 +103,30 @@ a{color:inherit}
 .ab-back{display:inline-block;margin-top:36px;font-size:15px;opacity:.62}
 .ab-back:hover{opacity:1}
 @media(max-width:640px){.ab{padding:72px 20px 120px}}
+
+/* ---- results: three facts from the case studies, set like the front door's stickers ---- */
+.ab-res{list-style:none;margin:0 0 88px;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.ab-res li{border:3px solid var(--ink);border-radius:16px;padding:18px 18px 16px;background:var(--acc);box-shadow:6px 6px 0 var(--ink);min-width:0}
+.ab-res b{display:block;white-space:nowrap;font-family:'Archivo Black',sans-serif;font-size:clamp(22px,3.4vw,26px);line-height:1;margin-bottom:10px;letter-spacing:-.01em}
+.ab-res span{display:block;font-size:15px;line-height:1.4}
+.ab-res a{text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:3px}
+@media(max-width:600px){.ab-res{grid-template-columns:1fr}}
+
+/* ---- what I do ---- */
+.ab-do{margin-top:104px}
+.ab-do ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.ab-do li{font-family:'Archivo Black',sans-serif;text-transform:uppercase;font-size:13px;letter-spacing:.05em;
+  border:3px solid var(--ink);border-radius:999px;padding:9px 14px 8px}
+.ab-tools{margin:22px 0 0;font-size:16px}
+
+/* ---- résumé button ---- */
+.ab-cv{display:inline-flex;align-items:center;gap:10px;margin:0 0 26px;font-family:'Archivo Black',sans-serif;text-transform:uppercase;
+  font-size:14px;letter-spacing:.05em;text-decoration:none;border:3px solid var(--ink);border-radius:999px;padding:12px 18px 11px;
+  background:#D8FF3E;box-shadow:5px 5px 0 var(--ink);transition:transform .18s ease,box-shadow .18s ease}
+.ab-cv:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--ink)}
+.ab-cv:focus-visible{outline:3px solid var(--ink);outline-offset:4px}
+.ab-contact .ab-mail{display:block;width:max-content;max-width:100%}
+@media(prefers-reduced-motion:reduce){.ab-cv{transition:none}}
 </style>
 </head>
 <body>
@@ -122,6 +146,12 @@ a{color:inherit}
 <main class="ab">
   <h1 class="ab-h">about</h1>
   <p class="ab-lede">Designer, illustrator and marketer, based in Northern Colorado and open to full-time roles and contract work. The short version of how I got here.</p>
+
+  <ul class="ab-res" aria-label="Selected results">
+    <li style="--acc:#6FD6E8"><b>149 &rarr; 329</b><span>Smoker Friendly stores, start to finish of my nine years running the brand. <a href="/SF/">See it</a></span></li>
+    <li style="--acc:#D8FF3E"><b>Sold out</b><span>The Rocky Mountain Cigar Festival, in record time, after I took over its identity. <a href="/RMCF/">See it</a></span></li>
+    <li style="--acc:#FFC845"><b>On the floor</b><span>Retail displays for Spanx, SunnyD, DeWalt and Olay, from dieline to prototype. <a href="/us-display-group/">See it</a></span></li>
+  </ul>
 
   <ol class="ab-list">
     <li class="ab-row">
@@ -145,6 +175,16 @@ a{color:inherit}
       <p>Founded <a href="https://seaofgrass.studio" target="_blank" rel="noopener">Sea of Grass</a> with Bryce Nielsen. It started in conversations about art history and became an exploration of new technology in relation to art and design.</p>
     </li>
   </ol>
+
+
+  <section class="ab-do">
+    <h2 class="ab-sub">What I do</h2>
+    <ul>
+      <li>Brand identity &amp; systems</li><li>Campaigns</li><li>Social, email &amp; web</li><li>Illustration</li>
+      <li>Print &amp; POP production</li><li>Dielines &amp; prepress</li><li>Event photography</li><li>Video &amp; motion</li><li>Interactive</li>
+    </ul>
+    <p class="ab-tools">Photoshop, Illustrator, InDesign, After Effects and Premiere, plus HTML/CSS and AI tools for ideas and production.</p>
+  </section>
 
   <section class="ab-more">
     <h2 class="ab-sub">Where that work lives</h2>
@@ -170,7 +210,8 @@ a{color:inherit}
 
   <section class="ab-contact" id="contact">
     <h2 class="ab-sub">Say hello</h2>
-    <p class="ab-avail">Based in Northern Colorado. Open to full-time roles and contract work.</p>
+    <p class="ab-avail">Based in Northern Colorado. Open to full-time roles and contract work, in Fort Collins, Loveland, Longmont, Boulder, Broomfield or remote.</p>
+    <a class="ab-cv" href="/resume.pdf">Download my r&eacute;sum&eacute; (PDF)</a>
     <a class="ab-mail" href="mailto:brewer.tristan@gmail.com">brewer.tristan@gmail.com</a>
     <a class="ab-back" href="/">&larr; Back to the portfolio</a>
   </section>
