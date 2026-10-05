@@ -4,3 +4,21 @@
 <FilesMatch "\.md$">
   ForceType 'text/plain; charset=UTF-8'
 </FilesMatch>
+
+# Section addresses work in any capitalisation: /sf, /Rmcf/, /ABOUT, /US-Display-Group, /usdg ...
+# each redirects to the page's real address. The condition on every rule lets the exact real
+# address through untouched, so a correct URL is served directly and can never loop. Only the
+# bare section path is matched; files inside the sections (assets, videos) are left alone.
+RewriteEngine On
+RewriteCond %{REQUEST_URI} !^/SF/$
+RewriteRule ^sf/?$ /SF/ [NC,R=301,L]
+RewriteCond %{REQUEST_URI} !^/RMCF/$
+RewriteRule ^rmcf/?$ /RMCF/ [NC,R=301,L]
+RewriteCond %{REQUEST_URI} !^/about/$
+RewriteRule ^about/?$ /about/ [NC,R=301,L]
+RewriteCond %{REQUEST_URI} !^/us-display-group/$
+RewriteRule ^(us-display-group|usdg)/?$ /us-display-group/ [NC,R=301,L]
+RewriteCond %{REQUEST_URI} !^/sea-of-grass/$
+RewriteRule ^sea-of-grass/?$ /sea-of-grass/ [NC,R=301,L]
+RewriteCond %{REQUEST_URI} !^/resume\.pdf$
+RewriteRule ^resume(\.pdf)?/?$ /resume.pdf [NC,R=301,L]
